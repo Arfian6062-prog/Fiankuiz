@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090817">
+  <title>QUIZVERSE // Moderasi Beragama</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="scanlines"></div>
+  <div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Quizverse home"><span class="brand-mark">Q</span><span>QUIZ<span class="neon">VERSE</span></span></a>
+    <div class="top-status"><span class="pulse"></span> SYSTEM ONLINE <span class="separator">/</span> SECTOR 07</div>
+  </header>
+
+  <main class="shell">
+    <section id="screen-home" class="screen active">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-line"></span> NEURAL KNOWLEDGE ARENA</div>
+          <h1>UJI OTAK.<br><span class="gradient-text">JAGA LOGIKA.</span></h1>
+          <p class="lead">Tujuh pertanyaan. Satu leaderboard. Dan entah kenapa, sistem penilaianmu punya kepribadian.</p>
+          <div class="hero-tags"><span>7 QUESTIONS</span><span>LIVE SCORE</span><span>CHAOS MODE: ON</span></div>
+          <button class="btn btn-primary" id="start-btn">MASUK ARENA <span>↗</span></button>
+          <p class="microcopy">PERINGATAN: tidak ada jaminan harga diri tetap utuh.</p>
+        </div>
+        <div class="hero-art">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="core"><div class="core-inner">Q<span>V</span></div></div>
+          <div class="floating-card card-top">MIND.exe <b>RUNNING</b></div>
+          <div class="floating-card card-bottom"><span class="tiny-dot"></span> CHAOS ENGINE <b>READY</b></div>
+          <div class="art-cross cross-one">＋</div><div class="art-cross cross-two">✳</div>
+        </div>
+      </div>
+      <div class="home-bottom">
+        <div class="mini-stat"><strong>07</strong><span>SOAL PILIHAN GANDA</span></div>
+        <div class="mini-stat"><strong>∞</strong><span>ALASAN UNTUK PANIK</span></div>
+        <div class="mini-stat"><strong>01</strong><span>KESEMPATAN MENJADI LEGENDA</span></div>
+      </div>
+    </section>
+
+    <section id="screen-register" class="screen">
+      <div class="section-kicker">PLAYER IDENTIFICATION // 01</div>
+      <div class="panel register-panel">
+        <div class="panel-heading"><div><span class="small-label">BEFORE THE CHAOS</span><h2>IDENTITAS PEMAIN</h2></div><div class="panel-icon">⌁</div></div>
+        <p class="muted">Isi data dengan benar. Leaderboard bukan tempat untuk menyamar jadi dosen.</p>
+        <form id="register-form">
+          <label>Nama lengkap<input id="player-name" name="name" maxlength="80" required placeholder="Contoh: Arfian Yoga"></label>
+          <label>Kelas<input id="player-class" name="class" maxlength="40" required placeholder="Contoh: Kewirausahaan A"></label>
+          <label>NPM<input id="player-npm" name="npm" maxlength="30" required inputmode="numeric" placeholder="Masukkan NPM"></label>
+          <p class="form-note">Data nama, kelas, NPM, dan hasil kuis akan disimpan di Google Spreadsheet untuk keperluan rekap permainan.</p>
+          <button class="btn btn-primary full" type="submit">KONFIRMASI & MULAI <span>→</span></button>
+        </form>
+        <button class="text-btn" id="back-home">← Kembali ke beranda</button>
+      </div>
+    </section>
+
+    <section id="screen-quiz" class="screen">
+      <div class="quiz-topline"><span class="section-kicker">KNOWLEDGE ARENA // LIVE SESSION</span><span class="player-chip" id="player-chip">PLAYER</span></div>
+      <div class="quiz-meta"><span id="question-count">QUESTION 01 / 07</span><span class="timer" id="timer">20.0s</span></div>
+      <div class="progress-track"><div id="progress-fill"></div></div>
+      <div class="panel question-panel">
+        <div class="question-flags"><span>MODERASI BERAGAMA</span><span id="difficulty-label">LOGIC CHECK</span></div>
+        <h2 id="question-text"></h2>
+        <div class="answers" id="answers"></div>
+        <div class="question-footer"><span id="question-hint">PILIH JAWABAN TERBAIK</span><span>NO ESCAPE // NO GOOGLE</span></div>
+      </div>
+      <div id="chaos-banner" class="chaos-banner" aria-live="polite"></div>
+      <div class="quiz-foot"><span>QUIZVERSE ENGINE v1.0</span><span id="score-live">SCORE: 000</span></div>
+    </section>
+
+    <section id="screen-result" class="screen">
+      <div class="section-kicker">SESSION TERMINATED // REPORT GENERATED</div>
+      <div class="panel result-panel">
+        <div class="result-orb"><span id="result-emoji">🏆</span></div>
+        <div class="small-label">YOUR FINAL VERDICT</div>
+        <h2 id="result-title">OTAK BERJALAN</h2>
+        <p class="muted" id="result-message"></p>
+        <div class="score-number"><strong id="final-score">000</strong><span>/ 700</span></div>
+        <div class="result-stats">
+          <div><strong id="correct-count">0</strong><span>BENAR</span></div>
+          <div><strong id="wrong-count">0</strong><span>SALAH</span></div>
+          <div><strong id="accuracy">0%</strong><span>AKURASI</span></div>
+        </div>
+        <p class="save-status" id="save-status">Mengirim hasil ke database...</p>
+        <div class="result-actions"><button class="btn btn-primary" id="retry-btn">MAIN LAGI ↻</button><button class="btn btn-secondary" id="leaderboard-btn">LEADERBOARD ☷</button></div>
+      </div>
+    </section>
+
+    <section id="screen-leaderboard" class="screen">
+      <div class="section-kicker">HALL OF FAME // TOP OPERATORS</div>
+      <div class="panel leaderboard-panel">
+        <div class="panel-heading"><div><span class="small-label">GLOBAL RANKING</span><h2>LEADERBOARD</h2></div><div class="panel-icon">♛</div></div>
+        <div id="leaderboard-content"><p class="muted">Memuat data pemain...</p></div>
+        <div class="leader-actions"><button class="btn btn-secondary" id="leader-home">← BERANDA</button><button class="btn btn-primary" id="leader-play">MAIN LAGI ↗</button></div>
+      </div>
+    </section>
+  </main>
+  <footer><span>© QUIZVERSE</span><span>BUILT FOR CURIOUS MINDS <b>◆</b></span></footer>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
