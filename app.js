@@ -1,5 +1,5 @@
 // QUIZVERSE front-end. Ganti API_URL setelah deploy Google Apps Script.
-const API_URL = "PASTE_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE";
+const API_URL = "https://script.google.com/macros/s/AKfycbz4znGEbep6F7qrLxHa_hnrs1J8n37NMLSpq4qTCK2KY1hk73sltueV1RlEn7ejCEhQ/exec";
 const QUESTIONS = [
   {q:"Di sebuah kelas terdapat siswa dengan agama yang berbeda-beda. Mereka memiliki cara beribadah yang berbeda, tetapi tetap bisa belajar dan bekerja sama. Sikap tersebut menunjukkan bahwa moderasi beragama adalah ....",a:["Menganggap semua agama memiliki aturan yang sama.","Menghargai perbedaan tanpa harus meninggalkan keyakinan sendiri.","Mengikuti cara beribadah teman agar tidak terjadi konflik.","Menghindari pertemanan dengan orang yang berbeda agama."],correct:1},
   {q:"Seorang teman mengajakmu mengikuti kegiatan keagamaan yang sesuai dengan keyakinannya. Kamu menolak dengan sopan karena memiliki keyakinan berbeda. Bagaimana sikap yang paling tepat?",a:["Memarahinya karena telah mengajak.","Mengikutinya meskipun bertentangan dengan keyakinanmu.","Menolak dengan sopan dan tetap menghargai dirinya.","Memutuskan pertemanan dengannya."],correct:2},
