@@ -89,7 +89,7 @@ function chooseAnswer(choice,timedOut){
 function getVerdict(correct){
   if(correct===7)return ["Professor of Chaos","🏆","Sempurna. Bahkan kalkulator meminta tanda tanganmu."];
   if(correct>=6)return ["Otak Berjalan","🧠","Logikamu stabil. Tolong jangan gunakan kekuatan ini untuk debat grup keluarga."];
-  if(correct>=4)return ["Lumayan Waras","😎","Ada cahaya pengetahuan di sana. Terus pertahankan."];
+  if(correct>=4)return ["Lumayan Pintar","😎","Ada cahaya pengetahuan di sana. Terus pertahankan."];
   if(correct>=2)return ["Korban Keadaan","🫠","Perjalanan masih panjang. Setidaknya kamu tidak menyerah."];
   return ["NPC Kehidupan","💀","Plot twist: kamu baru saja membuka tutorial kehidupan."];
 }
